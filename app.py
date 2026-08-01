@@ -169,7 +169,7 @@ st.markdown(
 # ----------------------------------------------------------------------------
 @st.cache_resource(show_spinner="Loading LSTM model...")
 def load_artifacts():
-    model = load_model("next_word_lstm.keras")
+    model = load_model("next_word_lstm.h5", compile=False)
     with open("tokenizer.pickle", "rb") as file:
         tokenizer = pickle.load(file)
     return model, tokenizer
