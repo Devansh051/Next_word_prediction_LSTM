@@ -1,11 +1,10 @@
-pandas
 tensorflow==2.15.0
+keras==2.15.0
+streamlit==1.47.1
+numpy==1.26.4
+pandas==2.2.3
 scikit-learn
-numpy
-tensorboard
+tensorboard==2.15.2
 matplotlib
-streamlit
-bs4
-ipykernel
-scikeras
+beautifulsoup4
 nltk
