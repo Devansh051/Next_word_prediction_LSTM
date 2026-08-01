@@ -241,12 +241,11 @@ try:
     model, tokenizer = load_artifacts()
     model_ready = True
 except Exception as e:
+    import traceback
+
     model_ready = False
-    st.error(
-        "⚠️ Could not load `next_word_lstm.keras` or `tokenizer.pickle`. "
-        "Make sure both files are in the same directory as this app."
-    )
-    st.caption(f"Details: {e}")
+    st.exception(e)
+    st.code(traceback.format_exc())
 
 # ----------------------------------------------------------------------------
 # Main input card
